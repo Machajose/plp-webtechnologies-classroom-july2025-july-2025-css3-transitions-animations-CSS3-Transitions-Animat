@@ -1,0 +1,62 @@
+.btn {
+    background: blue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+
+    /*/*this tells the browser to animate changes smoothly*/
+    transition: all 0.3s ease;
+}
+
+
+
+/*Hover state(when mouse is on the button)*/
+.btn:hover {
+    background: darkblue;
+    transform: scale(1.1); /*make it slightly larger*/
+}
+
+
+/* styles.css */
+.box {
+  width: 100px;
+  height: 100px;
+  background: orange;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* apply the animation */
+  animation: bounce 2s infinite;
+}
+
+/* keyframes define the motion steps */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-30px); } /* move up */
+  100% { transform: translateY(0); }     /* back down */
+}
+
+
+/* Spin box (triggered by JS) */
+.spin-box {
+  width: 100px;
+  height: 100px;
+  background: green;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.spin {
+  animation: spinAnim 1s linear;
+}
+
+@keyframes spinAnim {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
